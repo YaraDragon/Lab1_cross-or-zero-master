@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Добавил немного вестки" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +84,7 @@
       <workItem from="1601468787375" duration="1097000" />
       <workItem from="1601469919827" duration="5911000" />
       <workItem from="1601716052741" duration="15119000" />
-      <workItem from="1601732707983" duration="4087000" />
+      <workItem from="1601732707983" duration="5110000" />
     </task>
     <task id="LOCAL-00001" summary="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
       <created>1601734566502</created>
@@ -97,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601734566502</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавил немного вестки">
+      <created>1601736899069</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601736899069</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Мелкие исправления и добавления &quot;продолжение обучения&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Мелкие исправления и добавления &quot;продолжение обучения&quot;" />
+    <MESSAGE value="Добавил немного вестки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил немного вестки" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601733810663">
@@ -151,10 +155,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="501" y="136" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601468768200" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601734568042">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601736900535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601734568042" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601736900535" />
     <state x="790" y="310" key="svn.repositoryBrowser" timestamp="1601468869565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

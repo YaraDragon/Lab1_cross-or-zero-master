@@ -15,7 +15,7 @@ function App(props) {
     const dispatch = useDispatch();
 
     return (
-        <div >
+        <div style={{background:"#33333333"}} >
             <Grid
                 style={{width:"100vh",height:"100vh"}}
                 container
