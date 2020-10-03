@@ -1,7 +1,7 @@
 import {thresholdFunction} from "./membershipFunction";
 
 
-export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = -1, al = 0.01) => {
+export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = -1, al = 0.1) => {
 
     let fun = thresholdFunction
     let weightVectors = [];
@@ -67,12 +67,7 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                         let del = delta(sumWeightValue, weightVectors)
                         for (let j = 0; j < vectors[i].length; j++) {
                             deltaWeight.push(parseFloat(del) * parseFloat(vectors[i][j]))
-                            //     console.log(`newWeight [${j}] = ${deltaWeight[j]}`)
-                        }
-                        for (let j = 0; j < weightVectors.length; j++) {
-                            //   console.log(`weight = ${weightVectors[j]}`)
                             weightVectors[j] -= al * deltaWeight[j]
-                            // console.log(` newWeight =${weightVectors[j]}`)
                         }
                     }
 
@@ -106,10 +101,9 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                         console.log("delta =" + del)
                         for (let j = 0; j < vectors[i].length; j++) {
                             deltaWeight.push(parseFloat(del) * parseFloat(vectors[i][j]))
-                        }
-                        for (let j = 0; j < weightVectors.length; j++) {
                             weightVectors[j] -= al * deltaWeight[j]
                         }
+
                     }
 
                 }
@@ -137,32 +131,52 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                 let func;
                 sumWeightValue = sumWeight(vectors[vectors.length-1], weightVectors);
                 func = thresholdFunction(sumWeightValue, ifRight, ifWrong)
-                console.log('изоберажние ' + vectors.length-1 + ' Ответ ' + answerArray[vectors.length-1])
+                console.log('изоберажние ' + vectors.length + ' Ответ ' + answerArray[vectors.length-1])
                 console.log(`Функция ${func}`)
                 console.log(`Сумма ${sumWeightValue}`)
                 if (func == 1) {
                     alert('Это Х')
                     break
                 } else {
-                    alert('Это непонятная хуйная')
+                    alert('Это не X')
                     break
                 }
-                /*if (!isRight(func, answerArray[i])){
-                    let deltaWeight =[]
-                    sumError+=1;
-                    let err = error(sumWeightValue,weightVectors)
-                    console.log(" error ="+err)
-                    let del = delta(sumWeightValue,weightVectors)
-                    console.log("delta ="+del)
-                    for (let j = 0; j < vectors[i].length; j++) {
-                        deltaWeight.push(parseFloat(del)*parseFloat( vectors[i][j]))
-                    }
-                    for (let j = 0; j < weightVectors.length; j++) {
-                        weightVectors[j]-=al*deltaWeight[j]
-                    }
-                }*/
 
-            } default:
+            }case "extraEd": {
+                weightVectors = localStorage.getItem('VectorW').
+                replace('[','').
+                replace(']','').
+                split(',')
+                let sumWeightValue;
+                let func;
+                for (let i = 0; i < vectors.length; i++) {
+                    console.log('изображение ' + i + ' Ответ ' + answerArray[i])
+                    sumWeightValue = sumWeight(vectors[i], weightVectors);
+                    func = thresholdFunction(sumWeightValue, ifRight, ifWrong)
+                    console.log(func)
+                    if (!isRight(func, answerArray[i])) {
+                        let deltaWeight = []
+                        sumError += 1;
+                        let err = error(sumWeightValue, weightVectors)
+                        let del = delta(sumWeightValue, weightVectors)
+                        for (let j = 0; j < vectors[i].length; j++) {
+                            deltaWeight.push(parseFloat(del) * parseFloat(vectors[i][j]))
+                            weightVectors[j] -= al * deltaWeight[j]
+                        }
+                    }
+
+                }
+                if (sumError == 0) {
+                    localStorage.setItem('VectorW', weightVectors)
+                    break;
+                    return true;
+                } else {
+                    sumError = 0
+                    console.log(`epoxa ${epoch += 1}`)
+                    start("who")
+                    break;
+                }
+            }default:
                 break
         }
     }

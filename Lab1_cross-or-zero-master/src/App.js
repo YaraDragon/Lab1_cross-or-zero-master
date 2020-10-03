@@ -1,7 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react';
-import {Canvas} from "./component/Canvas";
 import {Button, Grid} from "@material-ui/core";
-import {CanvaNew, ReduxCanvaNew} from "./component/CanvaNew";
 import {connect, useDispatch} from "react-redux";
 import SaveImg from "./redux/actionCreators/SaveImg";
 import { ReduxCustomCanvas} from "./component/CustomCanvas";

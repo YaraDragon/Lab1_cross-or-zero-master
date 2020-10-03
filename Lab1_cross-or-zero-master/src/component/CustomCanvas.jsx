@@ -87,6 +87,15 @@ const CustomCanvas = (props) => {
         <div>
             <div style={{width: "300px", height: "300px"}}>
                 <Paper>
+                    <select
+                        value={tool}
+                        onChange={(e) => {
+                            setTool(e.target.value);
+                        }}
+                    >
+                        <option value="pen">Pen</option>
+                        <option value="eraser">Eraser</option>
+                    </select>
                     <Stage
                         width={300}
                         height={300}
@@ -113,27 +122,23 @@ const CustomCanvas = (props) => {
                 </Paper>
             </div>
             <canvas width={300} height={300} ref={stageImg}></canvas>
-            <select
-                value={tool}
-                onChange={(e) => {
-                    setTool(e.target.value);
-                }}
-            >
-                <option value="pen">Pen</option>
-                <option value="eraser">Eraser</option>
-            </select>
-            <Button onClick={Save}>Save</Button>
-            <Button onClick={tt}>Запуск</Button>
-            <Button onClick={clear}>Clear</Button>
-            <Button onClick={ee}> Спросить</Button>
+            <Button onClick={Save}>Сохранить</Button>
+            <Button onClick={clear}>Удалить картинку</Button>
+            <Button onClick={startEducation}>Начать обучение</Button>
+            <Button onClick={extraEducation}>Продолжить обучение</Button>
+            <Button onClick={ask}>Спросить</Button>
         </div>
     );
 
-    function tt() {
-        let a = Neron(props.vectors)
+    function startEducation() {
+        Neron(props.vectors)
     }
-    function ee(){
-        let a = Neron(props.vectors,"whoIt")
+    function ask(){
+        Neron(props.vectors,"whoIt")
+    }
+
+    function extraEducation(){
+        Neron(props.vectors,"extraEd")
     }
 };
 
