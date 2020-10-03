@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Stage, Layer, Line, Text} from 'react-konva';
-import {Button} from "@material-ui/core";
+import {Button, Grid} from "@material-ui/core";
 import SaveImg from "../redux/actionCreators/SaveImg";
 import {connect, useDispatch} from "react-redux";
 import {resizeAndCrop, vectorization} from "../utils/images";
@@ -9,6 +9,8 @@ import Paper from "@material-ui/core/Paper";
 import Vector from "../redux/actionCreators/Vector";
 import {Neron} from "../Logic/Neron";
 import {thresholdFunction} from "../Logic/membershipFunction";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Select from "@material-ui/core/Select";
 
 const mapStateToProps = (state) => ({
     vectors: state.vector.vectors
@@ -45,14 +47,26 @@ const CustomCanvas = (props) => {
                 }
             }
             newImg.src = newImgUrl;
-
+            clear()
         }
 
         layerRef.current.getLayer().toImage({callback: imageReceived});
 
     }
 
-    function clear(){
+    function startEducation() {
+        Neron(props.vectors)
+    }
+
+    function ask() {
+        Neron(props.vectors, "whoIt")
+    }
+
+    function extraEducation() {
+        Neron(props.vectors, "extraEd")
+    }
+
+    function clear() {
         layerRef.current.getStage().clear()
         setLines([])
     }
@@ -84,62 +98,66 @@ const CustomCanvas = (props) => {
     };
 
     return (
-        <div>
-            <div style={{width: "300px", height: "300px"}}>
-                <Paper>
-                    <select
-                        value={tool}
-                        onChange={(e) => {
-                            setTool(e.target.value);
-                        }}
-                    >
-                        <option value="pen">Pen</option>
-                        <option value="eraser">Eraser</option>
-                    </select>
-                    <Stage
-                        width={300}
-                        height={300}
-                        onMouseDown={handleMouseDown}
-                        onMousemove={handleMouseMove}
-                        onMouseup={handleMouseUp}
-                    >
-                        <Layer ref={layerRef}>
-                            {lines.map((line, i) => (
-                                <Line
-                                    key={i}
-                                    points={line.points}
-                                    stroke="#df4b26"
-                                    strokeWidth={5}
-                                    tension={0.5}
-                                    lineCap="round"
-                                    globalCompositeOperation={
-                                        line.tool === 'eraser' ? 'destination-out' : 'source-over'
-                                    }
-                                />
-                            ))}
-                        </Layer>
-                    </Stage>
-                </Paper>
-            </div>
-            <canvas width={300} height={300} ref={stageImg}></canvas>
-            <Button onClick={Save}>Сохранить</Button>
-            <Button onClick={clear}>Удалить картинку</Button>
-            <Button onClick={startEducation}>Начать обучение</Button>
-            <Button onClick={extraEducation}>Продолжить обучение</Button>
-            <Button onClick={ask}>Спросить</Button>
-        </div>
+        <>
+                <Grid container item
+                      direction="row"
+                      justify="center"
+                      alignItems="center"
+                >
+                    <Grid item>
+                        <div style={{width: "300px", height: "300px"}}>
+                            <Paper elevation={5}>
+                                <Select
+                                    value={tool}
+                                    onChange={(e) => {
+                                        setTool(e.target.value);
+                                    }}
+                                >
+                                    <option value="pen">Перо</option>
+                                    <option value="eraser">Ластик</option>
+                                </Select>
+                                <Stage
+                                    width={300}
+                                    height={300}
+                                    onMouseDown={handleMouseDown}
+                                    onMousemove={handleMouseMove}
+                                    onMouseup={handleMouseUp}
+                                >
+                                    <Layer ref={layerRef}>
+                                        {lines.map((line, i) => (
+                                            <Line
+                                                key={i}
+                                                points={line.points}
+                                                stroke="#df4b26"
+                                                strokeWidth={5}
+                                                tension={0.5}
+                                                lineCap="round"
+                                                globalCompositeOperation={
+                                                    line.tool === 'eraser' ? 'destination-out' : 'source-over'
+                                                }
+                                            />
+                                        ))}
+                                    </Layer>
+                                </Stage>
+                            </Paper>
+                        </div>
+                    </Grid>
+                    <Grid item>
+                        <canvas width={300} height={300} ref={stageImg}></canvas>
+                    </Grid>
+                </Grid>
+                    <ButtonGroup variant="contained">
+                        <Button style={{background: "green", color: "white"}}
+                                onClick={Save}>Сохранить картинку</Button>
+                        <Button color="secondary" onClick={clear}>Удалить картинку</Button>
+                        <Button onClick={startEducation}>Начать обучение</Button>
+                        <Button onClick={extraEducation}>Продолжить обучение</Button>
+                        <Button color="primary" onClick={ask}>Спросить</Button>
+                    </ButtonGroup>
+        </>
     );
 
-    function startEducation() {
-        Neron(props.vectors)
-    }
-    function ask(){
-        Neron(props.vectors,"whoIt")
-    }
 
-    function extraEducation(){
-        Neron(props.vectors,"extraEd")
-    }
 };
 
 

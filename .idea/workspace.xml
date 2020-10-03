@@ -19,13 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="">
+    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CanvaNew.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/Canvas.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,8 +88,16 @@
       <workItem from="1601468787375" duration="1097000" />
       <workItem from="1601469919827" duration="5911000" />
       <workItem from="1601716052741" duration="15119000" />
-      <workItem from="1601732707983" duration="1825000" />
+      <workItem from="1601732707983" duration="4087000" />
     </task>
+    <task id="LOCAL-00001" summary="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
+      <created>1601734566502</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601734566502</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +114,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Мелкие исправления и добавления &quot;продолжение обучения&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мелкие исправления и добавления &quot;продолжение обучения&quot;" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601733810663">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -119,22 +127,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601468966395" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601734133816">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601734602023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601734133816" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601734133816">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601734602023" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601734602023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601734133816" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601734133816">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601734602023" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601734602022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601734133816" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601734133816">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601734602022" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601734602023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601734133816" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601734602023" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1601468615534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -143,6 +151,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="501" y="136" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601468768200" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601734568042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601734568042" />
     <state x="790" y="310" key="svn.repositoryBrowser" timestamp="1601468869565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
