@@ -1,10 +1,11 @@
 import SaveImgAction from "../actions/SaveImgAction";
 
 
-function SaveImg(value) {
+function SaveImg(value,name) {
     return {
         type: SaveImgAction,
-        imgValue: value
+        imgValue: value,
+        imgName:name
     };
 }
 

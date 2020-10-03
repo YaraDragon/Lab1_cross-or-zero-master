@@ -13,9 +13,14 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Select from "@material-ui/core/Select";
 
 const mapStateToProps = (state) => ({
-    vectors: state.vector.vectors
+    vectors: state.vector.vectors,
+    imgs:state.a.imgValue,
 })
 
+let jsonVector = {
+    key: "",
+    vector: [],
+}
 
 const CustomCanvas = (props) => {
     const [tool, setTool] = React.useState('pen');
@@ -38,7 +43,7 @@ const CustomCanvas = (props) => {
                 vectorFromImg = vectorization(newImg)
                 let pictureMeaning = window.confirm("x ?")
                 if (vectorFromImg.length > 0) {
-                    let jsonVector = {
+                    jsonVector = {
                         key: pictureMeaning,
                         vector: vectorFromImg
                     }
@@ -51,7 +56,23 @@ const CustomCanvas = (props) => {
         }
 
         layerRef.current.getLayer().toImage({callback: imageReceived});
+    }
 
+    function vectorizationFromInputImg(){
+        const image = new Image()
+        let img = props.imgs.pop()
+        let name = img.name[0]
+        image.src = img.im
+        alert(name)
+        let miniImg = resizeAndCrop(image)
+        let vector =vectorization(miniImg)
+        if (vector.length > 0) {
+            let jsonVector = {
+                key: name,
+                vector: vector
+            }
+            dispatch(Vector(jsonVector))
+        }
     }
 
     function startEducation() {
@@ -99,61 +120,62 @@ const CustomCanvas = (props) => {
 
     return (
         <>
-                <Grid container item
-                      direction="row"
-                      justify="center"
-                      alignItems="center"
-                >
-                    <Grid item>
-                        <div style={{width: "300px", height: "300px"}}>
-                            <Paper elevation={5}>
-                                <Select
-                                    value={tool}
-                                    onChange={(e) => {
-                                        setTool(e.target.value);
-                                    }}
-                                >
-                                    <option value="pen">Перо</option>
-                                    <option value="eraser">Ластик</option>
-                                </Select>
-                                <Stage
-                                    width={300}
-                                    height={300}
-                                    onMouseDown={handleMouseDown}
-                                    onMousemove={handleMouseMove}
-                                    onMouseup={handleMouseUp}
-                                >
-                                    <Layer ref={layerRef}>
-                                        {lines.map((line, i) => (
-                                            <Line
-                                                key={i}
-                                                points={line.points}
-                                                stroke="#df4b26"
-                                                strokeWidth={5}
-                                                tension={0.5}
-                                                lineCap="round"
-                                                globalCompositeOperation={
-                                                    line.tool === 'eraser' ? 'destination-out' : 'source-over'
-                                                }
-                                            />
-                                        ))}
-                                    </Layer>
-                                </Stage>
-                            </Paper>
-                        </div>
-                    </Grid>
-                    <Grid item>
-                        <canvas width={300} height={300} ref={stageImg}></canvas>
-                    </Grid>
+            <Grid container item
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+            >
+                <Grid item>
+                    <div style={{width: "300px", height: "300px"}}>
+                        <Paper elevation={5}>
+                            <Select
+                                value={tool}
+                                onChange={(e) => {
+                                    setTool(e.target.value);
+                                }}
+                            >
+                                <option value="pen">Перо</option>
+                                <option value="eraser">Ластик</option>
+                            </Select>
+                            <Stage
+                                width={300}
+                                height={300}
+                                onMouseDown={handleMouseDown}
+                                onMousemove={handleMouseMove}
+                                onMouseup={handleMouseUp}
+                            >
+                                <Layer ref={layerRef}>
+                                    {lines.map((line, i) => (
+                                        <Line
+                                            key={i}
+                                            points={line.points}
+                                            stroke="#df4b26"
+                                            strokeWidth={5}
+                                            tension={0.5}
+                                            lineCap="round"
+                                            globalCompositeOperation={
+                                                line.tool === 'eraser' ? 'destination-out' : 'source-over'
+                                            }
+                                        />
+                                    ))}
+                                </Layer>
+                            </Stage>
+                        </Paper>
+                    </div>
                 </Grid>
-                    <ButtonGroup variant="contained">
-                        <Button style={{background: "green", color: "white"}}
-                                onClick={Save}>Сохранить картинку</Button>
-                        <Button color="secondary" onClick={clear}>Удалить картинку</Button>
-                        <Button onClick={startEducation}>Начать обучение</Button>
-                        <Button onClick={extraEducation}>Продолжить обучение</Button>
-                        <Button color="primary" onClick={ask}>Спросить</Button>
-                    </ButtonGroup>
+                <Grid item>
+                    <canvas width={300} height={300} ref={stageImg}></canvas>
+                </Grid>
+            </Grid>
+            <ButtonGroup variant="contained">
+                <Button style={{background: "green", color: "white"}}
+                        onClick={Save}>Сохранить картинку</Button>
+                <Button onClick={vectorizationFromInputImg}>Добавить картинки из загрузки</Button>
+                <Button color="secondary" onClick={clear}>Удалить картинку</Button>
+                <Button onClick={startEducation}>Начать обучение</Button>
+                <Button onClick={extraEducation}>Продолжить обучение</Button>
+                <Button color="primary" onClick={ask}>Спросить</Button>
+            </ButtonGroup>
         </>
     );
 

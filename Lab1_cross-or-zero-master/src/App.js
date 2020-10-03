@@ -9,10 +9,34 @@ const mapStateToProps = (state) => ({
     imgValue: state.a.imgValue
 })
 
+let json={
+    name:"",
+    im:[],
+}
 
 function App(props) {
 
     const dispatch = useDispatch();
+
+    function previewFile() {
+        let file    = document.querySelector('input[type=file]').files[0];
+        let name = document.querySelector('input[type=file]').files[0].name
+        let reader  = new FileReader();
+
+        reader.onloadend = function () {
+            alert(reader.result);
+            json={
+                name:name,
+                im:reader.result,
+            }
+            dispatch(SaveImg(json))
+        }
+        if (file) {
+            reader.readAsDataURL(file);
+
+        }
+
+    }
 
     return (
         <div style={{background:"#33333333"}} >
@@ -28,6 +52,7 @@ function App(props) {
                     </Grid>
                     <Grid item>
                         <Paper style={{padding: "10px"}} elevation={3}>
+                            <input onChange={previewFile} type="file" accept="image/*"/>
                             <ReduxCustomCanvas/>
                         </Paper>
                     </Grid>
@@ -38,10 +63,7 @@ function App(props) {
 
         </div>);
 
-    function saveImg(event) {
-        dispatch(SaveImg(event))
-        alert(event.toString())
-    }
+
 }
 
 export const AppWithRedux = connect(mapStateToProps)(App)
