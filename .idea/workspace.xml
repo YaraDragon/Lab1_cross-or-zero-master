@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Доделать обучение на картинках">
+    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Переделал вопрос к нейрону">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/membershipFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/actionFunction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +105,7 @@
       <workItem from="1601716052741" duration="15119000" />
       <workItem from="1601732707983" duration="10467000" />
       <workItem from="1601778406403" duration="1500000" />
-      <workItem from="1601797134088" duration="1106000" />
+      <workItem from="1601797134088" duration="2193000" />
     </task>
     <task id="LOCAL-00001" summary="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
       <created>1601734566502</created>
@@ -141,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601779188772</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Переделал вопрос к нейрону">
+      <created>1601798445551</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601798445551</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +171,8 @@
     <MESSAGE value="Мелкие исправления и добавления &quot;продолжение обучения&quot;" />
     <MESSAGE value="Добавил немного вестки" />
     <MESSAGE value="Доделать обучение на картинках" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доделать обучение на картинках" />
+    <MESSAGE value="Переделал вопрос к нейрону" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переделал вопрос к нейрону" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601741336763">
@@ -178,22 +187,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601468966395" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1601798277637">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601798509330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601798277637" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1601798277637">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601798509330" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601798509330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601798277637" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1601798277637">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601798509330" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601798509330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601798277637" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1601798277637">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601798509330" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601798509330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601798277637" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601798509330" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1601798277637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,10 +243,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="501" y="136" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601468768200" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601779193061">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601798778742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601779193061" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601798778742" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601738426505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,23 +259,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="310" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1601468869565" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js</url>
-          <line>92</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js</url>
-          <line>125</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

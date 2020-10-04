@@ -1,4 +1,4 @@
-import {thresholdFunction} from "./membershipFunction";
+import {thresholdFunction} from "./actionFunction";
 
 
 export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = -1, al = 0.1) => {

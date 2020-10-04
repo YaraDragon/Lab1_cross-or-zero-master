@@ -8,7 +8,7 @@ import {resizeAndCrop, vectorization} from "../utils/images";
 import Paper from "@material-ui/core/Paper";
 import Vector from "../redux/actionCreators/Vector";
 import {Neron} from "../Logic/Neron";
-import {thresholdFunction} from "../Logic/membershipFunction";
+import {thresholdFunction} from "../Logic/actionFunction";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Select from "@material-ui/core/Select";
 
