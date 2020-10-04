@@ -25,14 +25,15 @@ function App(props) {
 
         reader.onloadend = function () {
             alert(reader.result);
-            json={
-                name:name,
-                im:reader.result,
-            }
-            dispatch(SaveImg(json))
+
+        //    dispatch(SaveImg(json))
         }
         if (file) {
-            reader.readAsDataURL(file);
+            json={
+                name:name,
+                im:reader.readAsDataURL(file),
+            }
+           dispatch(SaveImg(json)) ;
 
         }
 
