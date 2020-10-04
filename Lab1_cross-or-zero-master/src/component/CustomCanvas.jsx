@@ -80,7 +80,30 @@ const CustomCanvas = (props) => {
     }
 
     function ask() {
-        Neron(props.vectors, "whoIt")
+        let vector=[];
+        const imageReceived = (img) => {
+            const newImgUrl = resizeAndCrop(img);
+            let vectorFromImg
+            console.log(newImgUrl)
+            const newImg = new Image;
+            newImg.onload = () => {
+                vectorFromImg = vectorization(newImg)
+                if (vectorFromImg.length > 0) {
+                    jsonVector = {
+                        key: "help",
+                        vector: vectorFromImg
+                    }
+
+                    vector.push(jsonVector)
+                    Neron(vector, "whoIt")
+                }
+            }
+            newImg.src = newImgUrl;
+            clear()
+        }
+        layerRef.current.getLayer().toImage({callback: imageReceived});
+
+        vector=[]
     }
 
     function extraEducation() {

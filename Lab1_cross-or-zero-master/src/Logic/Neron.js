@@ -15,6 +15,9 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
         answerArray.push(vectorsJson[i].key)
     }
 
+    /**
+     * Исправить 900
+     * */
     function init() {
         for (let i = 0; i < 900; i++) {
             weightVectors.push(-0.3 + (Math.random() * 0.6))
@@ -129,7 +132,7 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                 console.log(`ДЛИНА ВЕКРОВА ВЕСОВ ${weightVectors.length}`)
                 let sumWeightValue;
                 let func;
-                sumWeightValue = sumWeight(vectors[vectors.length-1], weightVectors);
+                sumWeightValue = sumWeight(vectors[0], weightVectors);
                 func = thresholdFunction(sumWeightValue, ifRight, ifWrong)
                 console.log('изоберажние ' + vectors.length + ' Ответ ' + answerArray[vectors.length-1])
                 console.log(`Функция ${func}`)
