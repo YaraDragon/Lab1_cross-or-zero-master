@@ -42,7 +42,7 @@ function App(props) {
     return (
         <div style={{background:"#33333333"}} >
             <Grid
-                style={{width:"100vh",height:"100vh"}}
+                style={{height:"100vh"}}
                 container
                 direction="column"
                 justify="center"
