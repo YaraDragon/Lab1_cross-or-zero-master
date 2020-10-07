@@ -19,12 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Переделал вопрос к нейрону">
+    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Все сломано">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +29,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -113,7 +116,10 @@
       <workItem from="1601797134088" duration="2887000" />
       <workItem from="1601804861832" duration="13000" />
       <workItem from="1601863304791" duration="2394000" />
-      <workItem from="1601865704158" duration="659000" />
+      <workItem from="1601865704158" duration="706000" />
+      <workItem from="1601867436762" duration="673000" />
+      <workItem from="1601888321755" duration="14000" />
+      <workItem from="1602042381750" duration="6333000" />
     </task>
     <task id="LOCAL-00001" summary="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
       <created>1601734566502</created>
@@ -164,7 +170,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601799407169</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Палитра цветов">
+      <created>1601866379769</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601866379770</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Все сломано">
+      <created>1602053334809</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602053334809</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +208,9 @@
     <MESSAGE value="Добавил немного вестки" />
     <MESSAGE value="Доделать обучение на картинках" />
     <MESSAGE value="Переделал вопрос к нейрону" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделал вопрос к нейрону" />
+    <MESSAGE value="Палитра цветов" />
+    <MESSAGE value="Все сломано" />
+    <option name="LAST_COMMIT_MESSAGE" value="Все сломано" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601741336763">
@@ -199,26 +221,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601733810663" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1602053325663">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602053325663" />
     <state x="795" y="417" key="Github.ShareDialog" timestamp="1601468966395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601468966395" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601865723498">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602053415740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601865723498" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601865723497">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602053415740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601865723497" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601865723497">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602053415740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601865723497" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601865723498">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602053415740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601865723498" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1601800711383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -259,14 +285,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="501" y="136" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601468768200" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601799409513">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601866381662">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601799409513" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601866381662" />
+    <state x="645" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1602053424866">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="645" y="254" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602053424866" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601738426505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601738426505" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1602050041460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602050041460" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601740215798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

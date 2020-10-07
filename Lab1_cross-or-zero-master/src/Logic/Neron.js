@@ -54,7 +54,11 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
 
     function start(mode = "newTraining") {
         switch (mode) {
+
             case "newTraining": {
+                if(epoch==0){
+                    console.log(`Эпоха №${epoch += 1}`)
+                }
                 init()
                 let sumWeightValue;
                 let func;
@@ -80,8 +84,11 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                     break;
                     return true;
                 } else {
+
+                    console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
+                    console.log('')
+                    console.log(`Эпоха №${epoch += 1}`)
                     sumError = 0
-                    console.log(`epoxa ${epoch += 1}`)
                     start("who")
                     break;
                 }
@@ -116,7 +123,9 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                     break;
                     return true;
                 } else {
-                    console.log(`epoxa ${epoch += 1}`)
+                    console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
+                    console.log('')
+                    console.log(`Эпоха №${epoch += 1}`)
                     sumError = 0
                     start("who")
                     break;
@@ -146,6 +155,9 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                 }
 
             }case "extraEd": {
+                if(epoch==0){
+                    console.log(`Эпоха №${epoch += 1}`)
+                }
                 weightVectors = localStorage.getItem('VectorW').
                 replace('[','').
                 replace(']','').
@@ -174,8 +186,10 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                     break;
                     return true;
                 } else {
+                    console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}%`)
+                    console.log('')
+                    console.log(`Эпоха №${epoch += 1}`)
                     sumError = 0
-                    console.log(`epoxa ${epoch += 1}`)
                     start("who")
                     break;
                 }
