@@ -79,14 +79,15 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                     }
 
                 }
+                console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
+                console.log('')
                 if (sumError == 0) {
                     localStorage.setItem('VectorW', weightVectors)
                     break;
                     return true;
                 } else {
 
-                    console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
-                    console.log('')
+
                     console.log(`Эпоха №${epoch += 1}`)
                     sumError = 0
                     start("who")
@@ -118,13 +119,14 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
 
                 }
                 console.log(`КОЛЛИЧЕСТВО ОШИБОК:${sumError}`)
+                console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
+                console.log('')
                 if (sumError === 0) {
                     localStorage.setItem('VectorW', weightVectors)
                     break;
                     return true;
                 } else {
-                    console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
-                    console.log('')
+
                     console.log(`Эпоха №${epoch += 1}`)
                     sumError = 0
                     start("who")
@@ -181,13 +183,14 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
                     }
 
                 }
+                console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}% `)
+                console.log('')
                 if (sumError == 0) {
                     localStorage.setItem('VectorW', weightVectors)
                     break;
                     return true;
                 } else {
-                    console.log(`Процент ошибки за эпоху: ${sumError/answerArray.length*100}%`)
-                    console.log('')
+
                     console.log(`Эпоха №${epoch += 1}`)
                     sumError = 0
                     start("who")
