@@ -53,7 +53,7 @@ function App(props) {
                     </Grid>
                     <Grid item>
                         <Paper style={{padding: "10px"}} elevation={3}>
-                            <input onChange={previewFile} type="file" accept="image/*"/>
+                            {/*<input onChange={previewFile} type="file" accept="image/*"/>*/}
                             <ReduxCustomCanvas/>
                         </Paper>
                     </Grid>

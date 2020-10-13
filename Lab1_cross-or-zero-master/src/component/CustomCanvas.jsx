@@ -101,7 +101,7 @@ const CustomCanvas = (props) => {
                 }
             }
             newImg.src = newImgUrl;
-            clear()
+            
         }
         layerRef.current.getLayer().toImage({callback: imageReceived});
 
@@ -216,7 +216,7 @@ const CustomCanvas = (props) => {
                     <ButtonGroup variant="contained">
                         <Button style={{background: "green", color: "white"}}
                                 onClick={Save}>Сохранить картинку</Button>
-                        <Button onClick={vectorizationFromInputImg}>Добавить картинки из загрузки</Button>
+                        {/*<Button onClick={vectorizationFromInputImg}>Добавить картинки из загрузки</Button>*/}
                         <Button color="secondary" onClick={clear}>Удалить картинку</Button>
                         <Button onClick={startEducation}>Начать обучение</Button>
                         <Button onClick={extraEducation}>Продолжить обучение</Button>

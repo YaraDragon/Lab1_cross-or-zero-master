@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Все сломано">
+    <list default="true" id="1fe8e642-05c3-4459-b89b-955f3efb3add" name="Default Changelist" comment="Красиво)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/Logic/Neron.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_cross-or-zero-master/src/component/CustomCanvas.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,12 @@
       <workItem from="1601865704158" duration="706000" />
       <workItem from="1601867436762" duration="673000" />
       <workItem from="1601888321755" duration="14000" />
-      <workItem from="1602042381750" duration="6333000" />
+      <workItem from="1602042381750" duration="7259000" />
+      <workItem from="1602062784963" duration="2000" />
+      <workItem from="1602067428038" duration="1309000" />
+      <workItem from="1602068892814" duration="1163000" />
+      <workItem from="1602140362449" duration="1708000" />
+      <workItem from="1602150441318" duration="1545000" />
     </task>
     <task id="LOCAL-00001" summary="Мелкие исправления и добавления &quot;продолжение обучения&quot;">
       <created>1601734566502</created>
@@ -184,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602053334809</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ничего не сломано">
+      <created>1602054376680</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602054376680</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Красиво)">
+      <created>1602054617226</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602054617226</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +231,9 @@
     <MESSAGE value="Переделал вопрос к нейрону" />
     <MESSAGE value="Палитра цветов" />
     <MESSAGE value="Все сломано" />
-    <option name="LAST_COMMIT_MESSAGE" value="Все сломано" />
+    <MESSAGE value="Ничего не сломано" />
+    <MESSAGE value="Красиво)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Красиво)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601741336763">
@@ -229,22 +252,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601468966395" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602053415740">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602142301236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602053415740">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602142301236" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602142301236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602053415740">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602142301236" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602142301236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602053415740">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602142301236" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602142301236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602053415740" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602142301236" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1601800711383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -281,14 +304,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601468615534" />
-    <state x="501" y="136" key="SettingsEditor" timestamp="1601468768200">
+    <state x="501" y="136" key="SettingsEditor" timestamp="1602071112500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="501" y="136" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601468768200" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601866381662">
+    <state x="501" y="136" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602071112500" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602067694764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601866381662" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602067694764" />
     <state x="645" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1602053424866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -15,9 +15,6 @@ export const Neron = (vectorsJson, mode = "newTraining", ifRight = 1, ifWrong = 
         answerArray.push(vectorsJson[i].key)
     }
 
-    /**
-     * Исправить 900
-     * */
     function init() {
         for (let i = 0; i < 900; i++) {
             weightVectors.push(-0.3 + (Math.random() * 0.6))
